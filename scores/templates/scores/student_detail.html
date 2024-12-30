@@ -1,0 +1,7 @@
+<h1>{{ student.name }}</h1>
+<ul>
+    {% for score in scores %}
+        <li>{{ score.subject.name }}: {{ score.score }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'index' %}">戻る</a>

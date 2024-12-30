@@ -1,0 +1,19 @@
+<h1>得点入力</h1>
+<form method="post">
+    {% csrf_token %}
+    学生: 
+    <select name="student">
+        {% for student in students %}
+            <option value="{{ student.id }}">{{ student.name }}</option>
+        {% endfor %}
+    </select><br>
+    科目: 
+    <select name="subject">
+        {% for subject in subjects %}
+            <option value="{{ subject.id }}">{{ subject.name }}</option>
+        {% endfor %}
+    </select><br>
+    得点: <input type="number" name="score"><br>
+    <button type="submit">登録</button>
+</form>
+<a href="{% url 'index' %}">戻る</a>

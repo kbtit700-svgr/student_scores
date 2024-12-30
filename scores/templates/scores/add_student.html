@@ -1,0 +1,8 @@
+<h1>学生登録</h1>
+<form method="post">
+    {% csrf_token %}
+    名前: <input type="text" name="name"><br>
+    学籍番号: <input type="text" name="student_id"><br>
+    <button type="submit">登録</button>
+</form>
+<a href="{% url 'index' %}">戻る</a>

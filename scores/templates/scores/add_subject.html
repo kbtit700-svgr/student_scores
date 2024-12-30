@@ -1,0 +1,7 @@
+<h1>科目登録</h1>
+<form method="post">
+    {% csrf_token %}
+    科目名: <input type="text" name="name"><br>
+    <button type="submit">登録</button>
+</form>
+<a href="{% url 'index' %}">戻る</a>
